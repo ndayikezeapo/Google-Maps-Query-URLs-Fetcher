@@ -1,4 +1,3 @@
-`# Apollinaire
 Google Maps Query URLs Fetcher
 
 This project provides a Python-based, open-source system designed to generate Google Maps search queries, scrape resulting place URLs, and store them efficiently. It leverages asynchronous programming (asyncio) and headless browser automation (Playwright) to achieve high throughput.
