@@ -1,8 +1,10 @@
 # Apollinaire
 Google Maps Query URLs Fetcher
+
 This project provides a Python-based, open-source system designed to generate Google Maps search queries, scrape resulting place URLs, and store them efficiently. It leverages asynchronous programming (asyncio) and headless browser automation (Playwright) to achieve high throughput.
-IMPORTANT DISCLAIMER: Please be aware that automated scraping of websites, especially at high volumes, may violate the Terms of Service of the target website (e.g., Google Maps). Google actively employs anti-bot measures, and attempting to scrape at the scale of 1,000 unique links per minute without using official APIs or proxies is highly likely to result in IP blocking, CAPTCHAs, or other restrictions. This project is provided for educational and theoretical purposes only. Users are responsible for ensuring their activities comply with all applicable laws and website terms of service.
-Features
+
+IMPORTANT DISCLAIMER: Please be aware that automated scraping of websites, especially at high volumes, may violate the Terms of Service of the target website (e.g., Google Maps). 
+
 •	Query Generation: Automatically creates Google Maps search URLs from lists of industry keywords and ZIP codes.
 •	Headless Browsing: Uses Playwright to navigate and interact with Google Maps pages in a headless (non-visual) browser environment.
 •	Link Extraction: Identifies and extracts unique Google Maps place URLs from search results.
@@ -12,13 +14,16 @@ Features
 •	Error Handling: Implements retries with exponential backoff for failed requests, allowing the scraper to continue processing.
 •	Configurable: Parameters like concurrency, timeouts, and batch sizes can be easily adjusted.
 •	Performance Monitoring: Logs the rate of unique URLs processed per minute.
+
 Technical Stack
+
 •	Language: Python 3.10+
 •	Automation: Playwright (headless Chromium)
 •	Parsing: Playwright selectors (JavaScript execution in browser context)
 •	Concurrency: asyncio
 •	Storage: sqlite3
 •	Logging: Python's built-in logging module
+
 Architecture & Data Flow
 graph LR
     A[4K Industries] & B[42K ZIPs] --> G[Query Generator]
