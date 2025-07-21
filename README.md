@@ -1,19 +1,9 @@
-# Apollinaire
+`# Apollinaire
 Google Maps Query URLs Fetcher
 
 This project provides a Python-based, open-source system designed to generate Google Maps search queries, scrape resulting place URLs, and store them efficiently. It leverages asynchronous programming (asyncio) and headless browser automation (Playwright) to achieve high throughput.
 
 IMPORTANT DISCLAIMER: Please be aware that automated scraping of websites, especially at high volumes, may violate the Terms of Service of the target website (e.g., Google Maps). 
-
-•	Query Generation: Automatically creates Google Maps search URLs from lists of industry keywords and ZIP codes.
-•	Headless Browsing: Uses Playwright to navigate and interact with Google Maps pages in a headless (non-visual) browser environment.
-•	Link Extraction: Identifies and extracts unique Google Maps place URLs from search results.
-•	De-duplication: Ensures no duplicate URLs are stored, both in-memory during a run and persistently across runs using an SQLite database.
-•	Persistent Storage: Stores unique URLs with timestamps in a local SQLite database.
-•	High Concurrency: Utilizes asyncio to parallelize fetching and processing, maximizing throughput.
-•	Error Handling: Implements retries with exponential backoff for failed requests, allowing the scraper to continue processing.
-•	Configurable: Parameters like concurrency, timeouts, and batch sizes can be easily adjusted.
-•	Performance Monitoring: Logs the rate of unique URLs processed per minute.
 
 Technical Stack
 
